@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using iTextSharp.text.pdf;
+using iText.Pdfa;
 using CV_Generator.Domain.Model;
+using System.Configuration;
+using iText.Kernel.Pdf;
+using iText.Forms;
 
 namespace CV_Generator.Domain.CV
 {
-    class CvGenerator
+    public class CvGenerator
     {
 
         /// <summary>
@@ -17,35 +20,26 @@ namespace CV_Generator.Domain.CV
         /// <param name="pathDestino"></param>
         /// <param name="info"></param>
         /// <returns></returns>
-        static bool GenerarCurriculum(string pathOrigen, string pathDestino, InfoDTO info)
+        public static bool GenerarCurriculum(InfoDTO info)
         {
             bool flag = false;
-
-            string pathFinal = string.Format(pathOrigen + info.Empresa);
+            string pathDestino = ConfigurationManager.AppSettings["PathDestino"];
+            string pathFinal = pathDestino + "CV_JuanAntonioSánchezCarmona_" + info.Empresa + ".pdf";
+            string pathOrigen = ConfigurationManager.AppSettings["PathTemplate"];
 
             try
             {
+                PdfADocument doc = new PdfADocument(new PdfReader(pathOrigen), new PdfWriter(pathFinal));
 
-                FileStream plantilla = new FileStream(pathOrigen, FileMode.Open);
+                PdfAcroForm form = PdfAcroForm.GetAcroForm(doc, false);
 
-                using (var newFile = new FileStream(pathDestino, FileMode.Create))
-                {
-                    var pdfReader = new PdfReader(plantilla);
+                form.SetGenerateAppearance(true);
 
-                    var pdfStamper = new PdfStamper(pdfReader, newFile);
+                form.GetField("Encabezado").SetValue(info.Nombre);
+                form.GetField("PiePágina").SetValue(new string("Descargado por " + info.Nombre + " " + info.Apellidos + "  para la empresa " + info.Empresa));
+                form.GetField("FechaYHora").SetValue(DateTime.Now.ToString());
 
-                    AcroFields fields = pdfStamper.AcroFields;
-
-                    fields.SetField("Encabezado", info.Nombre);
-                    fields.SetField("PiePágina", new string("Descargado por " + info.Nombre + " " + info.Apellidos + "  para la empresa " + info.Email));
-                    fields.SetField("FechaYHora", DateTime.Now.ToString());
-
-                    pdfStamper.FormFlattening = true;
-
-                    plantilla.Close();
-                    pdfStamper.Close();
-                    pdfReader.Close();
-                }
+                doc.Close();
 
                 flag = true;
 
@@ -53,10 +47,6 @@ namespace CV_Generator.Domain.CV
             catch (Exception ex)
             {
                 flag = false;
-            }
-            finally
-            {
-
             }
 
             return flag;

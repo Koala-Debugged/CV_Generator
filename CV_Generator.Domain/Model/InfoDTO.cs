@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CV_Generator.Domain.Model
 {
-    class InfoDTO
+    public class InfoDTO
     {
         private string _nombre;
         private string _apellidos;
@@ -18,6 +18,8 @@ namespace CV_Generator.Domain.Model
             this._empresa = empresa;
             this._email = email;
         }
+
+        public InfoDTO() { }
 
         public string Nombre
         {

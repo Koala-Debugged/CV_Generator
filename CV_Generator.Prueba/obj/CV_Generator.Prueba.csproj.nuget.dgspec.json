@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Prueba\\CV_Generator.Prueba.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Domain\\CV_Generator.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Domain\\CV_Generator.Domain.csproj",
+        "projectName": "CV_Generator.Domain",
+        "projectPath": "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Domain\\CV_Generator.Domain.csproj",
+        "packagesPath": "C:\\Users\\jasan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.2, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[7.1.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Prueba\\CV_Generator.Prueba.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Prueba\\CV_Generator.Prueba.csproj",
+        "projectName": "CV_Generator.Prueba",
+        "projectPath": "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Prueba\\CV_Generator.Prueba.csproj",
+        "packagesPath": "C:\\Users\\jasan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Prueba\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Domain\\CV_Generator.Domain.csproj": {
+                "projectPath": "C:\\Users\\jasan\\source\\repos\\Koala-Debugged\\CV_Generator\\CV_Generator.Domain\\CV_Generator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
