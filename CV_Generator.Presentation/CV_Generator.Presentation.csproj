@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>d81d458d-42c6-42fd-8eca-76beaaf696c2</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="wwwroot\videoplayback.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CV_Generator.Domain\CV_Generator.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

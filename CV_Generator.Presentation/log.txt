@@ -1,0 +1,6 @@
+System.IO.IOException: h:\root\home\koaladebugged-001\www\curriculumgenerator\templates\TemplateCurriculum1.pdf not found as file or resource.
+   at iText.IO.Source.RandomAccessSourceFactory.CreateByReadingToMemory(String filename)
+   at iText.IO.Source.RandomAccessSourceFactory.CreateBestSource(String filename)
+   at iText.Kernel.Pdf.PdfReader..ctor(String filename, ReaderProperties properties)
+   at iText.Kernel.Pdf.PdfReader..ctor(String filename)
+   at CV_Generator.Domain.CV.CvGenerator.GenerarCurriculum(InfoDTO info) in C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\CV\CvGenerator.cs:line 32

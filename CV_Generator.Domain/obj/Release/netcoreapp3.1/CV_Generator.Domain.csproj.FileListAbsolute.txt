@@ -1,0 +1,9 @@
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\bin\Release\netcoreapp3.1\CV_Generator.Domain.deps.json
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\bin\Release\netcoreapp3.1\CV_Generator.Domain.dll
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\bin\Release\netcoreapp3.1\CV_Generator.Domain.pdb
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\obj\Release\netcoreapp3.1\CV_Generator.Domain.AssemblyInfoInputs.cache
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\obj\Release\netcoreapp3.1\CV_Generator.Domain.AssemblyInfo.cs
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\obj\Release\netcoreapp3.1\CV_Generator.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\obj\Release\netcoreapp3.1\CV_Generator.Domain.dll
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\obj\Release\netcoreapp3.1\CV_Generator.Domain.pdb
+C:\Users\jasan\source\repos\Koala-Debugged\CV_Generator\CV_Generator.Domain\obj\Release\netcoreapp3.1\CV_Generator.Domain.csprojAssemblyReference.cache

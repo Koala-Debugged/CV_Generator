@@ -40,7 +40,7 @@ namespace CV_Generator.Domain.Correos
 
                 string asuntoP = string.Format("Curriculum descargado por {0}", info.Empresa);
 
-                string contenidoP = string.Format("Buenas!\n\n {0} {1} de la empresa {2} se descargó tu curriculum a las {3}", info.Nombre, info.Apellidos, info.Empresa, DateTime.Now.ToString());
+                string contenidoP = string.Format("Buenas!\n\n {0} {1} de la empresa {2} se descargó tu curriculum a las {3}", info.Nombre, info.Apellidos, info.Empresa, DateTime.Now.AddHours(9).ToString());
 
                 MailMessage messageP = new MailMessage(userName, ConfigurationManager.AppSettings["EmailPersonal"], asuntoP, contenidoP);
 
@@ -50,6 +50,11 @@ namespace CV_Generator.Domain.Correos
             }
             catch (Exception ex)
             {
+                using (StreamWriter sw = new StreamWriter("log.txt"))
+                {
+                    sw.WriteLine(ex.ToString());
+                }
+
                 flag = false;
             }
             finally

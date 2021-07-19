@@ -37,7 +37,9 @@ namespace CV_Generator.Domain.CV
 
                 form.GetField("Encabezado").SetValue(info.Nombre);
                 form.GetField("PiePágina").SetValue(new string("Descargado por " + info.Nombre + " " + info.Apellidos + "  para la empresa " + info.Empresa));
-                form.GetField("FechaYHora").SetValue(DateTime.Now.ToString());
+                form.GetField("FechaYHora").SetValue(DateTime.Now.AddHours(9).ToString()); //Se añaden 9 horas porque es la diferencia horaria con el servidor. 
+
+                form.FlattenFields();
 
                 doc.Close();
 
@@ -46,6 +48,10 @@ namespace CV_Generator.Domain.CV
             }
             catch (Exception ex)
             {
+                using (StreamWriter sw = new StreamWriter("log.txt"))
+                {
+                    sw.WriteLine(ex.ToString());
+                }
                 flag = false;
             }
 
